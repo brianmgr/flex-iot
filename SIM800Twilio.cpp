@@ -6,10 +6,8 @@
 void SIM800Twilio::begin()
 {
         _storage.reserve(512);
-        Serial.println();
         this->SoftwareSerial::begin(baud);
-        Serial.println();
-        this->reset_modem();
+//        this->reset_modem();
 }
 
 /*
