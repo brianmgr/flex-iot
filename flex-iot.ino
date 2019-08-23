@@ -80,14 +80,14 @@ void loop() {
   Serial.println("Temp: " + String(f));
   
   // Check for overheat, send command if so
-  if (f > float(85)){
+  if (f > float(100)){
     Serial.println("Triggered: " + String(f));
     String command = "Overheat detected!";
     for (int i=0; i<3; ++i){
       popText("OVERHEAT");
       popText("REPORTED");
     }
-//     modem.send_command(command);
+    modem.send_command(command);
     // Delay to lessen amount of alerts
     delay(10000);
   }
