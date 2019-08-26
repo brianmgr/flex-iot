@@ -80,7 +80,7 @@ void loop() {
   Serial.println("Temp: " + String(f));
   
   // Check for overheat, send command if so
-  if (f > float(100)){
+  if (f > float(105)){
     Serial.println("Triggered: " + String(f));
     String command = "Overheat detected!";
     for (int i=0; i<3; ++i){
